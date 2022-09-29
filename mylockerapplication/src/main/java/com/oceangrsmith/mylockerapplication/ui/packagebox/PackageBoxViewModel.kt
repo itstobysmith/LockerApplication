@@ -7,18 +7,10 @@ class PackageBoxViewModel(val packages : ArrayList<Package>?) : ViewModel() {
     
 
     fun handleClickListeners( data: String){
-        when(data){
+        /*when(data){
             OPEN_ALL_BOXES -> openAllBoxes()
             DONE -> navigateToLandingScreen()
-        }
-    }
-
-    private fun openAllBoxes(){
-
-    }
-
-    private fun navigateToLandingScreen(){
-
+        }*/
     }
 
     companion object{
