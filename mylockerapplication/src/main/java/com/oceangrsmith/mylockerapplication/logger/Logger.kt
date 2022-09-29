@@ -12,9 +12,9 @@ object Logger {
     /**
      * Initializes the logging framework with the [logger] provided.
      */
-    fun config(logger: IELogger = releaseLogger) {
+    /*fun config(logger: IELogger = releaseLogger) {
         Logger.logger = logger
-    }
+    }*/
 
     private val defaultTag: String
         get() = Throwable().stackTrace
