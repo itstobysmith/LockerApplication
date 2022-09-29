@@ -1,0 +1,68 @@
+<resources>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="generic_service_error_message">We\'re sorry, something went wrong.</string>
+    <string name="generic_connectivity_error_message">Your device has no connectivity.</string>
+    <string name="this_is_an_imagecontainer">this is an imageContainer</string>
+    <string name="human_image">human_image</string>
+    <string name="pick_a_package">PICK A PACKAGE</string>
+    <string name="deliver_a_package">DELIVER A PACKAGE</string>
+    <string name="locker_logo">locker logo</string>
+    <string name="need_help"><u>Need help?</u></string>
+    <string name="i_have_pin">I HAVE PIN</string>
+    <string name="no_pin">NO PIN</string>
+    <string name="input_account_pin">INPUT ACCOUNT PIN</string>
+    <string name="i_have_an_account">I HAVE AN ACCOUNT</string>
+    <string name="delivery_carrier">DELIVERY CARRIER</string>
+    <string name="delivery_details_title">DELIVERY DETAILS</string>
+    <string name="delivery_details_subtitle">Enter the Delivery Detail below to Deliver Package</string>
+    <string name="delivery_packages_to_clients">Delivery packages to clients</string>
+    <string name="input_package_pin">INPUT PACKAGE PIN</string>
+    <string name="login">LOGIN</string>
+    <string name="login_to_your_account">Login to your account to pick your packages</string>
+    <string name="enter_package_pin_to_deliver_your_package">Enter package PIN to deliver your package</string>
+    <string name="enter_your_account_phone_number">Enter Your Account Phone Number</string>
+    <string name="enter_your_account_pin">Enter Your Account PIN</string>
+    <string name="package_box_title">PACKAGE BOXES</string>
+    <string name="package_box_subtitle">Select Boxes to Open and Pickup Your Package</string>
+    <string name="open_all_boxes">OPEN ALL BOXES</string>
+    <string name="submit">SUBMIT</string>
+    <string name="no_pending_packages">YOU HAVE NO PENDING PACKAGE</string>
+    <string name="continue_button">CONTINUE</string>
+    <string name="incorrect_pin">INCORRECT PIN</string>
+    <string name="incorrent_details">INCORRECT DETAILS</string>
+    <string name="locker_is_now_open"> {locker} IS NOW OPEN </string>
+    <string name="wrong_delivery_pin_message">Sorry, the &lt;b>PIN&lt;/b> you entered is &lt;b>INCORRECT.&lt;/b> Please &lt;br /&gt;re-enter &lt;b>CORRECT PIN&lt;/b> </string>
+    <string name="wrong_pickup_pin_or_phone_no_message">Sorry, the &lt;b>PHONE NUMBER&lt;/b> or &lt;b>PASSWORD&lt;/b> &lt;br /&gt; you entered is &lt;b>INCORRECT.&lt;/b> Please re-enter details again.</string>
+    <string name="cancel">CANCEL</string>
+    <string name="done">DONE</string>
+    <string name="drop_package_off">Drop Package Off</string>
+    <string name="tap_done">TAP DONE </string>
+    <string name="select_package_size">\u0020      select package size</string>
+    <string name="select_courier">\u0020      select courier</string>
+    <string name="select_unit_number">\u0020      select Unit Number</string>
+    <string name="enter_new_courier">\u0020       Enter New Courier</string>
+    <string-array name="packages_size">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+    <string-array name="courier_services">
+        <item>Konga</item>
+        <item>Jumia</item>
+        <item>UPS</item>
+        <item>USPS</item>
+        <item>DHL</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="unit_number">
+        <item>Unit #101</item>
+        <item>Unit #102</item>
+        <item>Unit #103</item>
+        <item>Unit #104</item>
+        <item>Unit #105</item>
+        <item>Unit #106</item>
+    </string-array>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="locker_theme_color">#2E8FF8</color>
+    <color name="locker_bg_color">#c7cad6</color>
+    <color name="locker_white_color">#FFF</color>
+    <color name="locker_popup_transparent_white_color">#33FFFFFF</color>
+    <color name="locker_black">#000</color>
+    <color name="locker_selected_item">#FFCA00</color>
+    <color name="locker_pop_up_success_color">#5DC669</color>
+    <color name="locker_pop_up_failure_color">#F24A47</color>
+    <color name="locker_gray_bg">#F5F5F5</color>
+    <color name="locker_pop_up_bg_color">#E6FFFFFF</color>
+    <color name="locker_keyboard_background_color">#04203F</color>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:paddingRight="@dimen/locker_padding_10"
+    android:paddingLeft="@dimen/locker_padding_10"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/locker_padding_10"
+        android:background="@drawable/box">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/box_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="36sp"
+        android:fontFamily="@font/inter"
+        android:textFontWeight="500"
+        android:textColor="@color/locker_black"
+        android:gravity="center"
+        tools:text="BOX 1">
+    </TextView>
+</LinearLayout>

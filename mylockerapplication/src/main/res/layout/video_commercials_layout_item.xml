@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_commercial_container"
+    android:layout_width="match_parent"
+    android:layout_height="400dp">
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/simple_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+    </com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+
+</FrameLayout>

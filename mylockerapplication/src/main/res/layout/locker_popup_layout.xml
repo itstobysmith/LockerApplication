@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/locker_popup_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/locker_popup_transparent_white_color"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pop_up_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:textFontWeight="800"
+                android:gravity="center"
+                android:textColor="@color/locker_white_color"
+                tools:text="CONFIRM APARTMENT"/>
+
+        <ImageView
+            android:id="@+id/pop_up_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/openlocker"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/locker_padding_30"
+            android:layout_marginBottom="@dimen/locker_padding_30"
+            android:visibility="gone">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/pop_up_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/locker_padding_20"
+            android:textSize="20sp"
+            android:fontFamily="@font/inter"
+            android:layout_marginTop="@dimen/locker_padding_20"
+            android:textColor="@color/locker_black"
+            tools:text="The NAME attached to the selected unit is Emma Charles
+        and the PHONE NUMBER attached is 08012345678 Tap CONTINUE to proceed">
+        </TextView>
+
+        <TextView
+            android:id="@+id/pop_up_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@color/locker_theme_color"
+            android:fontFamily="@font/inter"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/locker_padding_10"
+            android:textFontWeight="600"
+            android:textSize="24sp"
+            tools:text="Tap CONTINUE to proceed">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/pop_up_options_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/locker_padding_30">
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

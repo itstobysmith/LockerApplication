@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    /*testImplementation 'junit:junit:4.+'*/
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  //  implementation 'androidx.core:core-ktx:1.5.0'
+
+    implementation Kotlin.jvm
+    implementation Kotlin.core
+
+    implementation Glide.glide
+    kapt Glide.glideCompiler
+
+    implementation Navigation.fragment
+    implementation Navigation.navigationUI
+
+    implementation Lifecycle.viewModel
+    implementation Lifecycle.liveData
+    kapt Lifecycle.lifecycleCompiler
+
+    implementation Misc.material
+    implementation Misc.appCompat
+    implementation Misc.constraintLayout
+    implementation Misc.cardView
+    implementation Misc.recyclerView
+    implementation Misc.annotation
+    implementation Misc.gson
+    implementation Misc.gmsLocationService
+    implementation Misc.pinView
+
+    implementation Network.retrofit
+    implementation Network.retrofitGson
+    implementation Network.retrofitCoroutineAdapter
+    implementation Network.okhttpInterceptor
+
+    testImplementation SharedTestLibs.junit
+    testImplementation SharedTestLibs.junitKtx
+    testImplementation SharedTestLibs.coreTesting
+    testImplementation SharedTestLibs.espresso
+    testImplementation SharedTestLibs.mockk
+    testImplementation UnitTestLib.coroutinesTest
+    testImplementation UnitTestLib.robolectric
+
+    androidTestImplementation SharedTestLibs.espresso
+    androidTestImplementation SharedTestLibs.junitKtx
+    androidTestImplementation SharedTestLibs.testCore
+    androidTestImplementation SharedTestLibs.testRule
+
+    debugImplementation SharedTestLibs.fragmentTest
+    debugImplementation SharedTestLibs.testCore
+
+    implementation Room.roomRuntime
+    implementation Room.roomKtx
+    kapt Room.roomCompiler
+}

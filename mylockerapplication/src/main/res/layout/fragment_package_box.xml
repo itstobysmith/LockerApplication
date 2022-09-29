@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.packagebox.PackageBoxFragment"
+android:background="@color/locker_gray_bg">
+
+<RelativeLayout
+    android:id="@+id/header_logo_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:background="@color/locker_theme_color">
+
+    <ImageView
+        android:id="@+id/locker_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="412dp"
+        android:maxHeight="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/logo"
+        android:contentDescription="@string/locker_logo" />
+</RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/package_back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header_logo_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/locker_padding_20"
+        android:layout_marginStart="@dimen/locker_padding_30"
+        android:layout_marginEnd="@dimen/locker_padding_10"
+        android:background="@drawable/backarrow"/>
+
+    <TextView
+        android:id="@+id/package_box_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/package_back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/locker_padding_10"
+        app:layout_constraintTop_toBottomOf="@id/header_logo_layout">
+    </TextView>
+
+    <TextView
+        android:id="@+id/package_box_subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/package_back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/locker_padding_10"
+        app:layout_constraintTop_toBottomOf="@id/package_box_title"/>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexbox_boxes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:flexWrap="wrap"
+        app:justifyContent="center"
+        android:padding="@dimen/locker_padding_10"
+        app:layout_constraintStart_toEndOf="@id/package_back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/locker_padding_10"
+        app:layout_constraintTop_toBottomOf="@id/package_box_subTitle"/>
+
+    <TextView
+        android:id="@+id/no_pending_package"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/package_back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/locker_padding_10"
+        app:layout_constraintTop_toBottomOf="@id/package_box_subTitle"
+        android:textColor="@color/locker_black"
+        android:fontFamily="@font/inter"
+        android:textFontWeight="800"
+        android:textSize="34sp"
+        android:text="@string/no_pending_packages"
+        android:visibility="gone"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/open_all_boxes"
+        style="?Locker_blue_bg_button"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/locker_padding_60"
+        android:layout_marginRight="@dimen/locker_padding_60"
+        android:background="@drawable/rounded_button_blue_bg"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toEndOf="@id/package_back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/locker_padding_10"
+        android:layout_marginTop="@dimen/locker_padding_20"
+        app:layout_constraintTop_toBottomOf="@id/flexbox_boxes"
+        tools:text="OPEN ALL BOXES" />
+
+</androidx.constraintlayout.widget.ConstraintLayout >

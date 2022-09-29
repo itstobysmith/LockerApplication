@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LockerAppTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="Locker_white_bg_button"> @style/white_bg_button</item>
+        <item name="Locker_blue_bg_button">@style/blue_bg_button</item>
+        <item name="Locker_theme_color">@color/locker_theme_color</item>
+    </style>
+</resources>

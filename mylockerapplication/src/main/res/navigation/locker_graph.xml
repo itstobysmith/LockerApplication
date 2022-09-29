@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/locker_graph"
+    app:startDestination="@id/LandingFragment">
+
+    <fragment
+        android:id="@+id/LandingFragment"
+        android:name="com.oceangrsmith.mylockerapplication.ui.landing.LandingFragment"
+        android:label=""
+        tools:layout="@layout/fragment_entrance">
+
+        <action
+            android:id="@+id/action_LandingFragment_to_pinFragment"
+            app:destination="@id/pinFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.oceangrsmith.mylockerapplication.ui.useraccess.UserAccessFragment"
+        android:label="fragment_pin"
+        tools:layout="@layout/fragment_pin">
+
+        <action
+            android:id="@+id/action_pinFragment_to_DeliveryDetailsFragment"
+            app:destination="@id/DeliveryDetailsFragment" />
+
+        <action
+            android:id="@+id/action_pinFragment_to_PackageBoxFragment"
+            app:destination="@id/packageBoxFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/packageBoxFragment"
+        android:name="com.oceangrsmith.mylockerapplication.ui.packagebox.PackageBoxFragment"
+        android:label=""
+        tools:layout="@layout/fragment_package_box">
+
+        <action
+            android:id="@+id/action_pinFragment_to_PackageBoxFragment"
+            app:destination="@id/LandingFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/DeliveryDetailsFragment"
+        android:name="com.oceangrsmith.mylockerapplication.ui.deliveryDetailsFragment.DeliveryDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_delivery_details">
+
+        <action
+            android:id="@+id/action_DeliveryFragment_to_openlockerFragment"
+            app:destination="@id/OpenLockerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OpenLockerFragment"
+        android:name="com.oceangrsmith.mylockerapplication.ui.openlocker.OpenLockerFragment"
+        android:label=""
+        tools:layout="@layout/fragment_open_locker">
+
+    <action
+        android:id="@+id/action_openlockerFragment_to_landingFragment"
+        app:destination="@id/LandingFragment" />
+    </fragment>
+
+
+</navigation>

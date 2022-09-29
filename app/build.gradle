@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "com.oceangrsmith.lockerapplication"
+        minSdk 21
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation project(':mylockerapplication')
+
+  //  implementation Design.designSupport
+
+    implementation Kotlin.jvm
+    implementation Kotlin.core
+
+    implementation Navigation.fragment
+    implementation Navigation.navigationUI
+
+    implementation Misc.material
+    implementation Lifecycle.viewModel
+    implementation Lifecycle.liveData
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt Lifecycle.lifecycleCompiler
+
+    implementation Misc.appCompat
+    implementation Misc.constraintLayout
+    implementation Misc.cardView
+    implementation Misc.recyclerView
+    implementation Misc.annotation
+    implementation Misc.gson
+    implementation Misc.gmsLocationService
+}

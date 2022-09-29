@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/locker_gray_bg"
+    tools:context=".ui.useraccess.UserAccessFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/header_logo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/locker_theme_color">
+
+        <ImageView
+            android:id="@+id/locker_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="412dp"
+            android:maxHeight="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/logo"
+            android:contentDescription="@string/locker_logo" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/pin_back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/locker_padding_30"
+        android:layout_marginStart="@dimen/locker_padding_60"
+        app:layout_constraintTop_toBottomOf="@id/header_logo_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/backarrow"/>
+
+    <TextView
+        android:id="@+id/user_access_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:textFontWeight="600"
+        android:textSize="30sp"
+        android:textColor="@color/locker_black"
+        android:textAllCaps="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/locker_padding_40"
+        app:layout_constraintTop_toBottomOf="@id/header_logo_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/user_access_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/locker_black"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_access_title"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/locker_padding_30"/>
+
+    <TextView
+        android:id="@+id/pin_layout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/locker_black"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/locker_padding_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_access_subtitle"/>
+
+    <com.chaos.view.PinView
+        android:id="@+id/pin_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        style="@style/PinWidget.PinView"
+        app:itemSpacing="30dp"
+        app:itemWidth="65dp"
+        app:itemHeight="75dp"
+        android:textSize="20sp"
+        android:textColor="@color/locker_black"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@id/pin_layout_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </com.chaos.view.PinView>
+
+    <com.oceangrsmith.mylockerapplication.ui.customviews.KeyPad
+        android:id="@+id/keypad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/pin_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/locker_padding_10"
+        android:layout_marginBottom="@dimen/locker_padding_10"
+        android:visibility="visible">
+    </com.oceangrsmith.mylockerapplication.ui.customviews.KeyPad>
+
+    <com.oceangrsmith.mylockerapplication.ui.customviews.LockerPopUp
+        android:id="@+id/locker_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone">
+    </com.oceangrsmith.mylockerapplication.ui.customviews.LockerPopUp>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

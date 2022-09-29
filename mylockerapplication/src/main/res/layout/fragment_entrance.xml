@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/entrance_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/locker_bg_color"
+    tools:context=".ui.landing.LandingFragment">
+
+
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/commercials_carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/locker_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/locker_padding_10"
+            app:fillColor="@color/locker_theme_color"
+            app:pageColor="#00000000"
+            app:radius="6dp"
+            app:slideInterval="4000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/commercials_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/locker_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@id/package_option_container"
+            app:layout_constraintStart_toStartOf="@id/package_option_container"
+            app:layout_constraintEnd_toEndOf="@id/package_option_container"
+            android:layout_marginBottom="@dimen/locker_padding_20"
+            android:contentDescription="@string/locker_logo" />
+
+        <FrameLayout
+            android:id="@+id/package_option_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="@dimen/locker_padding_20"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
